@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-primary"
+    (click)="handleClick()">
+      Display Details
+    </button>
+    <p *ngIf="showParagraph">
+      Hello World!
+    </p>
+
+  </div>
+</div>
+
+<div class="row" *ngFor="let logClick of clickLog; let i = index" [ngStyle]="{backgroundColor: i>=4 ? 'blue' : 'white'}">
+  <div class="col-xs-12">
+    <p [ngClass]="{'blue': i>=4}">{{logClick}}</p>
+  </div>
+</div>
+
